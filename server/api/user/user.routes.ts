@@ -3,6 +3,6 @@ import userHandler from "./user.handler";
 
 const userRouter: Router = Router()
 
-userRouter.get('/:id', userHandler.getUserDetails);
+userRouter.route('/:id').get(userHandler.getUserDetails);
 
 export default userRouter;

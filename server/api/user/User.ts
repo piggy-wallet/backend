@@ -16,10 +16,10 @@ export class User {
     @Column({type: "varchar", length: 50 })
     username!: string
 
-    @Column({type: "varchar", length: 50 })
+    @Column({type: "varchar", length: 50, default: '' })
     firstName!: string
 
-    @Column({type: "varchar", length: 50 })
+    @Column({type: "varchar", length: 50, default: '' })
     lastName!: string
 
     @Column({type: "varchar", length: 30 })
@@ -27,6 +27,9 @@ export class User {
 
     @Column({type: "varchar", length: 100 })
     wallet!: string
+
+    @Column({type: "varchar", length: 255})
+    privKey!: string
 
     @Column("double")
     balance!: number
