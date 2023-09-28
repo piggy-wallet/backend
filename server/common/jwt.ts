@@ -10,4 +10,8 @@ interface UserPayload {
     username: string;
 }
 
- export const sign = (payload: UserPayload) => jwt.sign(payload, secret, { expiresIn: jwt_env.expiresIn }); 
+ export const sign = (payload: UserPayload) => jwt.sign(payload, secret, { expiresIn: jwt_env.expiresIn });     
+
+ /* export const verify = (token: string, secret: string) => jwt.verify(token, secret, (err: any, user) => {
+    if (!err) 
+ }); */ 
